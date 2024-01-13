@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="card-front">
+                <span class="fillround"></span>
+                <span class="strokeround"></span>
+                <div class="c-no">0000 0000 0000 0000</div>
+                <div class="cname-ccard">
+                    <div class="c-name">Jane Appleseed</div>
+                    <div class="c-date">00/00</div>
+                </div>
+            </div>
+            <div class="card-back">
+                <div class="black-stripe"></div>
+                <div class="c-cvc">000</div>
+                <div class="fake">
+                    ______ _____ __ _ _____
+                    _ __ _ ______ ___ _ ______ __
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="input-details">
+                <form id="myCard">
+                    <label for="card-name" class="card-name-label">cardholder name</label><br>
+                    <input type="text" id="card-name" placeholder="e.g. Jane Appleseed">
+                    <label for="card-number" class="card-number-label">card number</label><br>
+                    <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+                    <span class="error cardnoerror">Wrong format numbers only</span>
+                    <div class="expdate-heading">
+                        <div class="monthandyear">Exp.date(mm/yy)</div>
+                        <div class="cvc-name">CVC</div>
+                    </div>
+                    <div class="expdate-inputs">
+                        <input type="number" min="1" max="12" id="month" placeholder="MM">
+                        <input type="number" min="26" max="36" id="year" placeholder="YY">
+                        <input type="number" min="001" max="999" id="cvc" placeholder="e.g. 123">
+                    </div>
+                    <span class="montherror error">can't be blank</span>
+                    <span class="cvcerror error">can't be blank</span>
+                    <button class="confirm">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

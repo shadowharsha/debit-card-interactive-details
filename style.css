@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* outer container */
+.container{
+    min-height: 100vh;
+    display: flex;
+}
+
+/* left part */
+.left{
+    flex-basis: 30%;
+    background-image: linear-gradient(to right top, #302d5c, #302d5b, #302d5b, #2f2c5a, #2f2c5a, #342b57, #392955, #3d2852, #44264c, #4a2445, #4d223e, #4f2238);
+    color: #fff;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+/* card front display */
+.card-front{
+    position: absolute;
+    top: 8rem;
+    left: 10rem;
+    width: 100%;
+    min-height: 35%;
+    padding: 2.5rem;
+    background-image: linear-gradient(to right top, #6292e1, #5488ea, #4b7df2, #4a71f8, #5163fc, #8555ef, #a843de, #c32bcb, #e027a7, #ec3d88, #eb5871, #e37165);
+    border-radius: 0.6rem;
+}
+
+/* card front fill round */
+.fillround{
+    display: inline-block;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: #fff;
+}
+
+/* card front stroke round */
+.strokeround{
+    display: inline-block;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.1rem solid #fff;
+    transform: translateY(-0.7rem);
+}
+
+/* card front number */
+.c-no{
+    margin-top: 5rem;
+    font-size: 2.8rem;
+}
+
+/* card name and expiry */
+.cname-ccard{
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* card back display */
+.card-back{
+    position: absolute;
+    top: 32rem;
+    left: 20rem;
+    width: 100%;
+    min-height: 35%;
+    background: #E6E6EB;
+    border-radius: 0.6rem;
+    padding: 2.5rem;
+}
+
+/* black stripe */
+.black-stripe{
+    width: calc(100% + 5rem);
+    height: 4rem;
+    background: #000;
+    transform: translateX(-2.5rem);
+}
+
+/* Back card cvv */
+.c-cvc{
+    background: #AEB6BF;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+/* fake text */
+.fake{
+    width: 70%;
+    text-align: center;
+    margin: 0.1rem auto;
+    color: #9ca3af;
+}
+
+/* right part */
+.right{
+    flex-basis: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+/* card name and card number */
+
+.card-name-label, .card-number-label{
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+}
+
+#card-name, #card-number{
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    outline: none;
+    border: 0.15rem solid #E6E6EB;
+    border-radius: 0.4rem;
+    font-family: "Courier Prime", monospace;
+    margin-bottom: 1.5rem;
+}
+
+/* error message */
+.error{
+    font-size: 1.2rem;
+    color: red;
+}
+
+/* error for card number */
+.cardnoerror{
+    display: inline-block;
+    transform: translateY(-1.1rem);
+    visibility: hidden;
+}
+
+/* error for month and year */
+
+.montherror{
+    position: relative;
+    top: -2.2rem;
+    visibility: hidden;
+}
+
+/* error for cvc number */
+.cvcerror{
+    position: relative;
+    top: -2.2rem;
+    left: 9rem;
+    visibility: hidden;
+}
+
+
+/* exp date and cvc headings*/
+.expdate-heading{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    gap: 2.6rem;
+}
+
+.monthandyear, .cvc-name{
+    flex: 1;
+}
+
+.expdate-inputs{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* exp date and cvc headings inputs */
+.expdate-inputs input{
+    flex: 1;
+    padding: 0.8rem 1rem;
+    flex-basis: 3rem;
+    outline: none;
+    border: 0.15rem solid #E6E6EB;
+    border-radius: 0.4rem;
+    font-family: "Courier Prime", monospace;
+    margin-bottom: 1.5rem;
+}
+
+#cvc{
+    flex: 3;
+    margin-left: 1rem;
+}
+
+
+.confirm{
+    width: 100%;
+    padding: 0.9rem 1rem;
+    color: #fff;
+    background: #000;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* media query */
+@media only screen and (max-width:600px){
+
+    .container{
+        flex-direction: column;
+        background: skyblue;
+        gap: 5rem;
+
+    }
+
+    .left, .right{
+        flex: 1;
+    }
+
+   .card-back{
+    top: 18%;
+    left: 5%;
+    scale: 0.75;
+    z-index: 1;
+    font-size: 1.8rem;
+   }
+
+   .card-front{
+    top: 50%;
+    left: -5%;
+    scale: 0.75;
+    z-index: 2;
+    font-size: 1.6rem;
+   }
+
+   .c-no{
+    font-size: 3rem;
+   }
+
+   .cname-ccard{
+    font-size: 2rem;
+   }
+
+   .right{
+     margin: 0 2rem;
+     
+   }
+
+   .card-name-label, .card-number-label, .expdate-heading{
+    font-size: 1.6rem;
+   }
+
+   .confirm{
+    font-size: 1.6rem;
+   }
+
+
+}
+
+
